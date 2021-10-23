@@ -1,0 +1,546 @@
+/* body {
+  background: rgba(36, 245, 9, 0.787);
+} */
+* {
+  margin-block-end: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+/* reset */
+a {
+  text-decoration: none;
+}
+
+
+/* reset os marcadores do menu ul ... os pontinhos laterais */
+ul{
+  list-style: none;
+} 
+
+
+/* função mestra com variavel para cor*/
+:root {
+  --header-height: 4.5rem;
+
+  /* colors */
+  --hue: 1777;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 6%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+
+
+  /* fonts */
+  --title-font-size: 2rem;
+  --subtitle-font-size: 1.0rem;
+  
+}
+
+
+/* deixa fixo o cabeçalho mesmo rolando as paginas para cima ou para baixo */
+#header {
+  position: fixed;
+  top:0; 
+  left:0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #6d0b0b;
+  background-color: var(--body-color);
+  /*possível defeito  colocar background-color: var(--color-color); */
+}
+
+main {
+  margin-top: var(--header-height);
+}
+
+.logo {
+  font: 700 1.5rem 'Merienda', sans-serif;
+  color: var(--title-color);
+}
+
+.logo span {
+  color: var(--base-color);
+}
+
+.logo-alt span{
+  color: var(--body-color);
+}
+
+
+/* funçao no html para deixar a navegação das paginas mais suave ao ir para baixo ou para cima na navegação */
+html{
+  scroll-behavior: smooth;
+}
+
+
+body {
+  font: 400 1.1rem 'Merienda', sans-serif;
+  color: var(--text-color);
+  background: var(--body-color);
+  -webkit-font-feature-settings: antialiased;
+}
+
+/* salao beleza viva 1.3rem nao desconfigura pagina */
+.title {
+  font: 700 1.3rem 'Merienda', sans-serif; /* 1rem= 16px */
+  color: var(--title-color);
+}
+.container {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: var(--header-height);
+  align-items: center;
+  width: 100%;
+}
+.toggle{
+  font-size: 1.5rem;
+  color: var(--base-color);
+  /* pointer aparece a maozinha ao chegar no menu*/
+  cursor: pointer;
+}
+/* efeitos no "X" fehcar menu x desce*/
+nav .icon-close{
+  visibility: hidden;
+  opacity: 0;
+  top: -1.5rem;
+  transition: 0.3s;
+
+  position: absolute;
+  right: 1.5rem;
+}
+/* efeitos no "X" fehcar menu x some */
+nav.show div.icon-close{
+  visibility: visible;
+  top: 1.5rem;
+  opacity: 1;
+}
+
+/* 1 mostra a opão menu com a função show*/
+nav.show .menu{
+  opacity: 1;
+  visibility: visible;
+  background: var(--body-color);
+  height: 100vh; 
+  width: 100vw;
+  top: 0;
+  left: 0;
+  position: fixed; 
+
+}
+
+/* alinha o menu no centro da pagina.*/
+nav ul li {
+  text-align: center;
+ 
+}
+
+/* efeito cor .... fazer com que a cor entre e saia mais devagar.*/
+nav ul li a{
+transition: color 0.4s;
+position: relative;
+}
+
+/* efeitos : estilizando os intens do  menu */
+nav ul li a:hover{
+  color: var(--base-color);
+}
+
+
+/* antes de ficar em cima do marcador para o menu ajustes de linha inicio 0 */
+nav ul li a::after{
+content:"";
+width: 0%;
+height: 2px;
+background: var(--base-color);
+
+
+position: absolute;
+left:0;
+bottom: -0.5rem;
+transition 0.2s;
+
+}
+
+/* apos ficar em cima do marcador para o menu ajustes de linha inicio 0 */
+nav ul li a:hover::after{
+width: 100%;
+}
+
+/* espaçamento dos itens do menu na pagina. quado selecinado*/
+nav.show ul.grid {
+  gap: 4rem;
+}
+
+/* centraliza o menu*/
+nav.show .menu {
+  display: grid;
+  place-content: center;
+}
+
+
+/* 0 oculta a opão menu...*/
+nav .menu{
+  opacity: 0;
+  visibility: hidden;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+/*faça espaçamento em cima e embaixo e do lado nao mexer*/
+.section {
+  padding: 1rem 0;
+}
+
+.section .sutitle{
+  font-size: var(--subtitle-font-size);
+}
+
+.grid {
+  display:grid;
+  gap: 2rem;
+}
+
+.section .title{
+  margin-bottom: 1rem; 
+}
+
+
+.button {
+  background-color: var(--base-color);
+  color: var(--text-color-light);
+  display: inline-flex; /* block; deixa o botão inteiro no quadro da pagina*/
+  height: 3.5rem;
+  align-items: center;
+  padding: 0 2rem;
+  font: 500 1.1rem 'Merienda', sans-serif;
+  transform: background 0.3s;
+}
+.button:hover {
+  background: var(--base-color-alt);
+}
+.divider {
+  height: 1px;
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue), 36%, 57%, 1) 0%,
+    hsla(var(--hue), 56%, 88%, 0.34) 100%
+  );
+}
+
+
+
+
+
+
+
+/* Session HOME*/
+#home .container {
+  margin: 0;
+}
+
+#home .text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: center;
+}
+#home .text h1 {
+  margin-bottom: 1rem;
+}
+#home .text p {
+  margin-bottom: 2rem;
+}
+
+#home .image {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  position: relative;
+  /*width: 100%;
+  height: auto;
+  border-radius: 0.25rem;*/
+}
+
+
+
+
+
+
+
+/* Session About*/
+#about{
+  background: white;
+}
+
+#about .container {
+  margin: 0;
+}
+
+#about.text {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  text-align: justify;
+}
+#about .text h1 {
+  margin-bottom: 1rem;
+}
+#about .text p {
+  margin-bottom: 2rem;
+}
+
+#about .image {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  position: relative;
+  
+}
+
+
+
+
+
+
+/* Session Services*/
+
+.justify-text {
+  text-align: justify;
+}
+.sections header {
+  margin-bottom: 0.1rem;
+}
+
+.card{
+  padding: 3.625rem 2rem;
+  box-shadow: var(--base-color);
+  border-bottom: .25rem solid var(--base-color);
+  border-radius: .25rem .25rem 0 0;
+  text-align: center;
+}
+
+.card i {
+  display:block;
+  margin-bottom: 1.5rem;
+  font-size: 5rem;
+  color: var(--base-color);
+}
+
+.cards.grid{
+  gap:1.5rem;
+}
+
+.card .title{
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+
+
+
+/* Session contact  pagina 4*/
+#contact .grid{
+  gap: 1rem;
+}
+
+#contact .text p{
+  margin-bottom: 2rem;
+  text-align: justify;
+}
+
+#contact .button{
+  margin-top: 1.5rem;
+  
+}
+
+#contact .button i{
+  font-size: 1.5rem;
+  margin-right: 0.675rem;
+}
+
+#contact ul.grid{
+  gap: 1rem;
+}
+
+/* cor das imagens no contato*/
+#contact ul li i {
+  color: var(--base-color);
+  font-size: 1.5rem;
+  margin-right: 0,625rem;
+
+}
+
+#contact .align_button {
+  text-align: center;
+}
+
+
+
+/* Session footer*/
+footer{
+  background: var(--base-color);  
+}
+
+footer .logo{
+  display: inline-block;
+  margin-bottom: 1.5rem;
+
+}
+
+footer .brand p{ 
+color: var(--text-color-light);
+margin-bottom: 0.75rem;
+}
+
+footer i {
+  font-size: 1.5rem;
+  color:var(--text-color-light);
+}
+
+footer .social a {
+  margin-right: 2rem;
+}
+
+
+
+/* @media Session configuraçao de dispositivos e seus tamalhos de paginas 
+https://www.youtube.com/watch?v=LmHWbF01MZI&t=4s */
+/* >1200px extra large*/
+/* >1023px large*/
+/* >992px large*/
+/* >767px medium tablet por exemplo*/
+/* menores que 767px são os mobie */ 
+
+@media (min-width: 992px) {
+.title{
+  font-size: 2.25rem;
+}
+}
+
+@media(min-width: 1200px){
+
+  .section {
+    padding: 10rem 0;
+  }
+/* diminui a area da pagina em um valor pré determinado no caso 1120px */
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.buttom {
+  height: 3.125rem;
+}
+  nav .menu{
+    opacity: 1;
+    visibility: visible;
+    top: 0;
+  }
+
+  nav .menu ul{
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul a.title {
+    font: 400 1rem var(--title-font);
+  }
+
+  nav .icon-menu{
+    display: none;
+  }
+
+  #home .image{
+    order: 1;
+  }
+
+  #home .text{
+    order: 0;
+    max-width: 24rem;
+    text-align:left;
+  }
+
+  #home .container{
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    
+  
+  }
+
+/* sobre */
+  #about .container{
+grid-auto-flow: column;
+margin: 0 auto;
+
+  }
+
+/* serviço */
+.section header{
+  max-width: 32rem;
+  text-align: center;
+  margin-left: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+/*funçao cards pode dar destaque a algun dos cards se modificarmos o valor de "fr" */
+.cards{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card{
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+#contact .container {
+  grid-auto-flow: column;
+}
+#contact .text{
+  max-width: 25rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#contact .align_button{
+  text-align: left;
+}
+
+footer .container{
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+footer.section{
+  padding: 3.75rem 0;
+}
+
+footer .logo{
+  font-size: 14.5;
+}
+
+:root{
+  --title-font-size: 2.25rem;
+  --subtitle-font-size: 1.125rem;
+}
+
+}
+
+
+
+
+
+

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <!-- acentuação UTF-8 -->
+    <!-- ctrl +s ajusta todas as funções -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salão Beleza Viva</title>
+    <!-- abaixo chama o CSS para o HTML -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- fontes do google fontes  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;700&family=Merienda:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- funçao para trazer as imagnes dos icones criados para o index utilizar  
+    <link rel="stylesheet" href="hair/style.css" />
+    -->
+    <link rel="stylesheet" href="a/style.css" />
+
+    <!-- cria uma linha de divisão na paginas  -->
+    <div class="divider"></div>
+  </head>
+
+  <body>
+    <!-- cabeçalho -->
+    <header id="header">
+      <nav class="container show">
+        <a class="logo" href="#">Salão <span>Beleza Viva</span></a>
+        <div class="menu">
+          <!-- ul>li*4>a -->
+          <!-- href é o chamado da url -->
+          <!-- colocar # para nao ir par link por enquanto e no a dar o nome da listagem -->
+          <ul class="grid">
+            <li><a class="title" href="#home">Início</a></li>
+            <li><a class="title" href="#about">Sobre</a></li>
+            <li><a class="title" href="#services">Serviços</a></li>
+            <li><a class="title" href="#contact">Contatos</a></li>
+          </ul>
+        </div>
+
+        <!-- quem vai trabalhar com estas open e close será uma funçaõ javascript -->
+        <div class="toggle icon-menu"></div>
+        <div class="toggle icon-close"></div>
+      </nav>
+    </header>
+
+    <!-- principal -->
+    <main>
+      <!-- 1 pagina-->
+      <section class="section" id="home">
+        <div class="container grid">
+          <div class="image">
+            <img
+              src="https://scontent.fppy4-1.fna.fbcdn.net/v/t1.6435-9/38850730_697981693883007_4340847584059850752_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGRfynQgR0TONvCMNZ_VYJVSDnC2cmydARIOcLZybJ0BCUJrY0SktAwkv9OXMu8KbgBnycWNYGcTMB0rVRubCF2&_nc_ohc=6583LLEG-PIAX-_xyT7&_nc_ht=scontent.fppy4-1.fna&oh=4fe58b8a48b0de728b6c49ba85f676ec&oe=618C8F2D"
+              alt="imagem do logotipo do salão Beleza viva: "
+            />
+          </div>
+
+          <div class="text">
+            <h1>Venha conhecer o melhor atendimento da região</h1>
+            <p class="subtitle">Seus cabelos merecem o melhor!!!</p>
+            <a
+              class="button"
+              href="https://www.facebook.com/cabelereiradeboramendes"
+              target="blank"
+              >Conheça nossos serviços</a
+            >
+          </div>
+        </div>
+      </section>
+      <div class="divider"></div>
+
+      <!-- 2 pagina-->
+      <!-- section todas iguais somente muda o id -->
+      <section class="section" id="about">
+        <div class="container grid">
+          <!-- buscar imagens https://unsplash.com/ -->
+          <div class="image">
+            <img
+            src="https://scontent.fppy4-1.fna.fbcdn.net/v/t1.6435-9/38795076_698635817150928_979127474040340480_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=e3f864&_nc_eui2=AeGcdI1BddwbhWBlEpOI8QDPVLzmx68TILFUvObHrxMgsSPCknSUm-y5ZPdme_64gmy4eg8VKwpDXb4AlHWv7-BP&_nc_ohc=j1UwRaTFeGkAX8PSe9V&tn=jxkTrMoM33uD-VPC&_nc_ht=scontent.fppy4-1.fna&oh=9adec278e72692e5bc1b7b766f12d53f&oe=618F52D9"
+            alt="imagem do logotipo do salão Beleza viva com a seguinte frase:
+            De aos seus cabelos o cuidado que ele Merece.: "
+          </div>
+
+          <div class="text">
+            <!--função para criar 3 paragrafos h2.title+p*3*/-->
+            <h2 class="title">Sobre Nós</h2>
+
+            <!--função lorem cria um texto aleatório para teste-->
+            <p class="subtitle">
+              Nosso atentimento é com horário marcado, tornando seu atendimento
+              personalisado!
+            </p>
+            <br />
+            <p class="subtitle">
+              Desde a sua inauguração o Salão Beleza Viva tem seu atendimento
+              realidado de forma segura e única sendo um cliente por vez, para
+              que o profissinal que lhe atender possa trazer escelencia em seu
+              trabalho, pois não trabalhamos com "portas abertas" temos um
+              espaço aconchegante e exclusivo para seu conforto.
+            </p>
+            <br />
+            <p class="subtitle">
+              Possuímos alvará e licença para o funcionamento, respeitando todas
+              as normas e exigências sanitárias exigidas pela prefeitura .
+            </p>
+
+            <br />
+            <p class="subtitle">
+              O Salão Beleza Viva se encontra em uma região muito agradável e
+              calma de Santa Rita do Sapucaí. Local de fácil acesso.
+            </p>
+
+            <br />
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- 3 pagina-->
+
+      <section class="section" id="services">
+        <div class="container grid">
+          <header>
+            <h2 class="title">Serviços</h2>
+
+            <p class="justify-text subtitle">
+              Com anos no mercado, o Salão Beleza Viva já conquistou clientes de
+              varias cidades oferecendo o melhor tratamento para seus cabelos .
+            </p>
+          </header>
+          <!-- ajusta os cards  -->
+          <div class="cards grid">
+            <!-- funçao para gerar o title abaixo .card*3>(i.icon-)+h3.title+p.title 
+          
+          criamos 3 cartões sendo cada cartão com imagem titulo e descrição-->
+            <!-- 1card -->
+            <div class="card">
+              <i class="icon-shower"></i>
+              <h3 class="title">Lavagem Premium</h3>
+              <p class="subtitle">
+                Conheça todos os tipos de tratamentos oferecidos para cada tipo
+                de cabelo.
+              </p>
+            </div>
+            <!-- 2 card -->
+            <div class="card">
+              <i class="icon-color_lens"></i>
+              <h3 class="title">Pintura e retoque</h3>
+              <p class="subtitle">
+                Diversas opçoes de mudança de cor para todos os tipos de cabelo
+                e personalidades lincando sua necessidade de mudanca de visual
+              </p>
+            </div>
+
+            <!-- 3 card -->
+            <div class="card">
+              <i class="icon-content_cut"></i>
+              <h3 class="title">Cortes Estilizados</h3>
+              <p class="subtitle">
+                Cortes diferenciados para todos os tipos de cabelos .
+              </p>
+            </div>
+
+            <!-- 4 card -->
+            <div class="card">
+              <i class="icon-pizza-delivery"></i>
+              <h3 class="title">Tratamentos dedicados</h3>
+              <p class="subtitle">
+                Adquira os melhores produtos do mercado para seus cabelos.
+              </p>
+            </div>
+
+            <!-- 5 card -->
+            <div class="card">
+              <i class="icon-wheelchair"></i>
+              <h3 class="title">Espaço com acessibilidade</h3>
+              <p class="subtitle">
+                Seu conforto e bem estar é uma de nossas principais metas.
+              </p>
+            </div>
+
+            <!-- 6 card -->
+            <div class="card">
+              <i class="icon-user-check"></i>
+              <h3 class="title">Promoções</h3>
+              <p class="subtitle">
+                Não deixe de conferir nas redes sociais as promoções do salão!!!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- 4 pagina-->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato com agente !</h2>
+            <p class="subtitle">
+              Entre em contato com o Salão Beleza Viva, queremos tirar suas
+              dúvidas, ouvir suas críticas e sugestões.
+            </p>
+            <!-- M3-02: Implementando Contato por Whatsapp  https://www.techtudo.com.br/dicas-e-tutoriais/2018/11/como-gerar-link-do-whatsapp.ghtml -->
+
+            <div class="align_button">
+              <!-- criando um botão -->
+              <a
+                class="button"
+                href="https://api.whatsapp.com/send?phone=35999098021&text=entre em contato conosco"
+                target="blank"
+                ><i. class="icon-whatsapp"></i.> Entrar em contato</a
+              >
+            </div>
+          </div>
+
+          <div class="link">
+            <ul class="grid">
+              <li><i class="icon-phone"></i> (35) 99909-8021</li>
+              <li><i class="icon-map-pin"></i> Praça Francisco Falção nº72</li>
+              <li><i class="icon-map-pin"></i> Santa Rita do Sapcucaí-MG</li>
+              <li><i class="icon-mail"></i> debycabelereira@gmail.com</li>
+
+              <!--hair css:  
+
+              <li><i class="icon-color_lens"></i> 1</li>
+              <li><i class="icon-palette"></i> 2</li>
+              <li><i class="icon-content_cut"></i> 3</li>
+              <li><i class="icon-phone"></i> 4</li>
+              <li><i class="icon-close"></i> 5</li>
+              <li><i class="icon-facebook"></i> 6</li>
+              <li><i class="icon-instagram"></i> 7</li>
+              <li><i class="icon-mail"></i> 8</li>
+              <li><i class="icon-map-pin"></i> 9</li>
+              <li><i class="icon-menu"></i> 10</li>
+              <li><i class="icon-pizza-delivery"></i> 11</li>
+              <li><i class="icon-whatsapp"></i> 12</li>
+              <li><i class="icon-youtube"></i> 13</li>
+              <li><i class="icon-shower"></i> 14</li>
+              <li><i class="icon-wheelchair"></i> 15</li>
+              <li><i class="icon-user-check"></i> 16</li>
+              <li><i class="icon-scissors"></i> 17</li>
+              <li><i class=""></i> 12</li> 
+            --></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="divider"></div>
+
+    <!-- rodapé -->
+
+    <footer class="section">
+      <div class="container grid">
+        <div class="brand">
+          <a class="logo logo-alt" href="#home"
+            >Salão <span>Beleza Viva</span></a
+          >
+          <p>©2021 Salão Beleza Viva.</p>
+          <p>Todos os direitos reservados.</p>
+        </div>
+
+        <div class="social">
+          <!-- a*3>i.icon cria a seguencia das 3 imagens -->
+          <a href="https://instagram.com" target="blank"
+            ><i class="icon-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/cabelereiradeboramendes"
+            target="blank"
+            ><i class="icon-facebook"></i
+          ></a>
+          <a href="https://youtube.com" target="blank"
+            ><i class="icon-youtube"></i
+          ></a>
+
+          <!--target="blank" funçao para abrir nova pagina e manter a que estava aberta   -->
+        </div>
+      </div>
+    </footer>
+    <!-- insere o java script: leia o script chamado main.js-->
+    <script src="main.js"></script>
+  </body>
+</html>
